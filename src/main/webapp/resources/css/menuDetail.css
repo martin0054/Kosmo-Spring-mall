@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* body  */
+.body {
+	float: left;
+	width: 1000px;
+	overflow: hidden
+}
+
+.body .menu_01 {
+	background: url(../images/메뉴&주문/상세메뉴/메뉴배경.PNG) 0 0 no-repeat;
+	height: 200px;
+}
+
+.menu_name {
+	padding: 70px 0 0 35px;
+	font-size: 32px;
+	font-weight: bold;
+	color: #ffffff;
+}
+.hi {
+	padding: 13px 0 0 35px;
+	color: black;
+}
+
+.first_table {
+	margin-left:50px;
+	width:100%; 
+	border:0;
+	align:center;
+}
+.body div {
+	margin-left: 60px;
+}
+
+.body hr {
+	margin-left: 70px;
+}
+
+#gc img {
+	width:740px;
+}
+
+#gc div{
+	margin:0 auto;}

@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* 회원가입 */
+.wrap {
+	width: 1200px;
+	hight : 1000px;
+	margin: 0 auto;
+}
+
+
+body {
+	height: 1500px;
+}
+html{
+	height: 1500px;
+}
+.body {
+	foat: left;
+	width: 1000px;
+	overflow: hidden
+}
+
+.body div {
+	margin-left: 60px;
+}
+
+.body hr {
+	margin-left: 70px;
+}
+
+form {
+	width: 1000px;
+	height: 1000px;
+}
+
+
+form .hi {
+	margin-right: 0px;
+	margin-left: 21%;
+	width: 890px;
+	height: 700px;
+}
+
+
+.hi .ess {
+	color:black;
+	width: 150px;
+	border-bottom: 1px solid #EAEAEA;
+	text-align: left;
+}
+
+.hi .tb2 {
+	border-bottom: 1px solid #EAEAEA;
+	padding: 6px 0 6px 18px;
+	letter-spacing: 0pt;
+	align: left;
+	text-align: left;
+	color:black;
+}
+
+
+.hi .p {
+	color: red;
+	font-weight: bolder;
+	padding-right: 6px
+}
+/*마이 페이지 */
+.myTbl {
+	align:center;
+	margin-right: 0px;
+	margin-left: 21%;
+	width: 600px;
+	height: 600px;
+}
+
+.myTbl .ess {
+	color:black;
+	width: 150px;
+	border-bottom: 1px solid #EAEAEA;
+	text-align: left;
+}
+
+.myTbl .tb2 {
+	border-bottom: 1px solid #EAEAEA;
+	padding: 6px 0 6px 18px;
+	letter-spacing: 0pt;
+	align: left;
+	text-align: left;
+	color:black;
+}
+
+a {
+	text-decoration:none;
+	color : black;
+	align : center;
+	font-size :25px;
+}

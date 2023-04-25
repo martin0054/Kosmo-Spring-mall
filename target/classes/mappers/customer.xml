@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+  
+ <!-- 
+ 	1. <mapper namespace="패키지명.인터페이스명">
+ 	2. <id="식별자">는 유일해야 하며,인터페이스의 메소드명을 사용한다. 
+ 		즉, 인터페이스 메소드 와 Mapper의 갯수는 동일하다
+ 	3. select문장은  resultType 필수
+ 	 **주의사항 : 원래 select 문장의 reusultType이 int형이면 "SELECT *"=> SELECT COUNT(*)으로 바꾼다.
+ 	4. insert, update, delete 문장은 parameterType 필수
+	   resultType은  int형이며, mybatis가 알아서 성공,실패 여부의 결과값을 넘긴다.
+	5. parameterType , reusultType 이 클래스 타입인 경우 => 패키지명.클래스명 
+	6. 문장의 끝에 ';'을 붙이지 않는다.
+	7. parameter 일반변수명은 반드시 일치해야한다. 예)#{strId}
+	8. parameter값이 2개 이상일떄는 parameter타입을 java.util.Map 또는 VO로 받는다. 
+	   Map에 추가된 키와 #{변수명}이 일치해야 한다.
+	9. preparedStatement의 '?' 대신 pstmt에서 set한 변수명이 온다. => #{변수명}  
+	   
+-->
+ <mapper namespace="com.spring.dakbal.persistence.MemberDAO">
+
+	<!-- ID 중복확인 체크  -->
+	<select id="idCheck" parameterType="String" resultType="int">
+		SELECT COUNT(*) FROM mvc_member WHERE id=#{strId}
+	</select>
+
+	<!-- 회원가입 처리 --> 
+	<insert id="insertMember" parameterType="com.spring.dakbal.vo.MemberVo">
+		INSERT INTO mvc_member(
+		VALUES(#{id},#{pwd},#{name},#{sex},#{birth},#{hp},#{address},#{email},#{howCom},#{job},#{reg_date},1,"USER")
+	</insert>
+
+	<!-- //로그인 처리 페이지 ,회원 탈퇴 처리 페이지,회원정보 수정시 비밀번호 인증   -->
+	<select id="idPwdChk" resultType="int" parameterType="java.util.Map">
+		SELECT  COUNT(*) FROM mvc_member WHERE id=#{strId}AND pwd=#{strPwd}
+	<!-- strId,strPwd는 Map의 키값-->
+	</select>
+	
+	<!-- 회원 탈퇴처리 -->
+	<delete id="deleteMember" parameterType="String">
+		DELETE FROM mvc_member WHERE id=#{strId}
+	</delete>
+	
+	<!--  회원정보 상세 처리 -->
+	<select id="getMemeberInfo" resultType="com.spring.dakbal.vo.MemberVo">
+		SELECT * FROM mvc_member WHERE id=#{strId}
+	</select>
+	
+	<!--회원 상세 정보 -securityUserAuthenticationService loadUserByUsername()에서 체크   -->
+	<select id="selectUser" resultType="java.util.Map"> <!-- #{map}의 key 값과 일치해야한다. -->
+		SELECT id as username, pwd as password, name, enabled, authority
+		FROM mvc_member
+		WHERE id=#{strId}
+	</select>
+	
+	<!-- 회원정보 수정 처리  --> 
+	<update id="updateMember" parameterType="com.spring.dakbal.vo.MemberVo">
+		UPDATE mvc_member SET pwd =#{pwd}, hp =#{hp}, address=#{address}, email =#{email}, job=#{job} WHERE id =#{id}
+	</update>
+
+	<!-- id찾기 pro  -->
+	<select id="findIDPro" resultType="Stirng">
+		SELECT id FROM mvc_member WHERE email=#{email}
+	</select>
+	
+	<!-- pwd찾기 pro  -->
+	<select id="findPwdPro" resultType="String" parameterType="java.util.Map">
+		SELECT pwd FROM mvc_member WHERE email=#{email} and id=#{memId}
+	</select>
+
+	<!-- 장바구니수량  -->
+	<select id="cartCnt" resultType="int">
+		SELECT COUNT(*) as cnt FROM orders WHERE me_id=#{sessionId}
+	</select>
+
+	<!-- 구매요청,승인 수량 state_code=1 ,2  -->
+	<select id="buyCnt" resultType="int">
+		SELECT COUNT(*) as buyCnt FROM orders WHERE me_id=#{sessionId} AND state_code In(1,2)
+	</select>
+
+	<!-- 환불요청 수량 state_code=3,4 -->
+	<select id="refuntCnt" resultType="int">
+		SELECT COUNT(*) as refuntCnt FROM orders WHERE me_id=#{sessionId} AND state_code In(3,4)
+	</select>
+
+
+ </mapper>

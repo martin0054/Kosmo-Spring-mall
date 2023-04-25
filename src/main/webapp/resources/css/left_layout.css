@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+.wrap {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.left_layout {
+	float: left;
+	width: 200px;
+}
+
+.left_layout div h2 {
+	background: url(../images/빨강배경.JPG);
+	background-repeat: no-repeat;
+	background-Position: 50% 0%;
+	weight: 200px;
+	height: 200px;
+	letter-spacing: -1.5px;
+	margin : 0;
+}
+
+.left_layout div h2 {
+	height: 200px;
+	line-height: 200px;
+	color: #ffffff;
+	text-align: center;
+	font-size: 22px;
+}
+
+.left_layout ul {
+	line-height: 50px;
+	list-style: none;
+	padding: 0px;
+	border: 1px solid #dddddd;
+}
+
+.left_layout ul li {
+	line-height: 50px;
+	list-style: none;
+	padding: 10px;
+	border-bottom: 1px solid #dddddd;
+}
+
+.wrap .left_layout ul li a {
+	font-size: 14px;
+	height: 50px;
+	text-decoration: none;
+	color: black;
+	align: center;
+}
+
+/* 왼쪽 리스트 마우스 오버시 글자 색상 변경 */
+.wrap .left_layout ul li a:hover {
+	color: #bd1824;
+}
+

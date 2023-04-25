@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.wrap {
+	width: 1200px;
+	margin: 0 auto
+}
+
+/* body  */
+.body {
+	float: left;
+	width: 1000px;
+	overflow: hidden
+}
+
+.body a {
+	text-decoration: none;
+}
+
+.body div {
+	margin-left: 60px;
+}
+
+.body ul {
+	margin-left: 20px;
+}
+
+.body li {
+	list-style: none;
+}
+
+.body hr {
+	margin-left: 60px;
+}
+
+.body ul li .n_img {
+	width: 800px;
+	heigh: 300px
+}
+
+.banner {
+	background: url(../images/배너.JPG) 0 0 no-repeat;
+	height: 215px;
+	letter-spacing: -1px;
+}
+
+.banner div.banner1 {
+	padding: 70px 0 0 55px;
+	font-size: 32px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.banner div.banner2 {
+	padding: 13px 0 0 55px;
+	color: #b9b9b9;
+	font-size: 12;
+}
+

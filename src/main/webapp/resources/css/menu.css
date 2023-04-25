@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+.body {
+	width: 1000px;
+	overflow: hidden
+}
+
+.body div {
+	margin-left: 60px;
+}
+
+.body hr {
+	margin-left: 70px;
+}
+
+.meT {
+	width: 100%;
+	border: 0;
+	cellspacing: 0;
+	cellpadding: 4;
+	align: center;
+}
+
+.goods {
+	width: 900px;
+	border: 0;
+	align: center;
+}
+
+.goods_menu {
+	border: 0;
+	cellspacing: 0;
+	cellpadding: 0;
+	width: 255;
+}
+
+div .goods_img {
+	border: 0;
+}
+.meT a{
+	text-decoration : none;
+}
+/* .goods_name{
+	padding-top:15px;
+	text-align:center;
+}
+
+.goods_comment{
+	padding-top:10px;
+	text-align:center;
+}	 */
+.o_price {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.price {
+	color: red;
+	font-weight: bold;
+	text-align: center;
+}
+
+.point {
+	color: #ee6232;
+	padding-top: 4px;
+	text-align: center;
+}
+
+.cartTbl tr td {
+	text-align: center;
+}
+.orderListTbl tr td {
+	text-align: center;
+}

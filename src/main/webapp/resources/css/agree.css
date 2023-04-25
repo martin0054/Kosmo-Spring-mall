@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+#box {
+	margin: auto;
+	display: block;
+	vertical-align:middle;
+}
+
+#inBox {
+	width: 45%;
+	float: left;
+	margin: 20px;
+	display: inline;
+	border: 1px #ccc solid;
+	padding:20px;
+	text-align: center;
+
+}
+
+
+.agree {
+	text-align: left;
+	width: 90%;
+	height: 120px;
+	padding: 10px;
+	border: 1px #ccc solid;
+	margin: auto;
+	overflow:auto;
+}
+#pre{
+	white-space: pre-line;
+}
+#ag_allT{
+	text-align: center;
+	margin: auto;
+	font-size:13px;
+}
+.agT{	
+	float: right;
+	text-align: right;
+	font-size:13px;
+	padding-right: 25px;
+}
+.agree_title{
+	float: left;
+	padding-left: 35px;
+	padding-bottom: 12px;
+}
+

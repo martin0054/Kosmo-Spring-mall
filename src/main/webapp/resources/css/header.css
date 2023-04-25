@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+.wrap {
+	width: 1200px;
+	margin: 0 auto
+}
+
+/* .클래스명 1 .클래스명2 : 클래스명 사이 공백 : 하위 으로 인식 */
+/* header_layout */
+.header_layout {
+	height: 125px;
+	position: relative;
+}
+
+.header_layout .logo {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.header_layout .callcenter {
+	position: absolute;
+	right: 0;
+	text-align: right;
+	bottom: 20px;
+}
+li {
+	list-style: none;
+}
+.header_Sub li {
+	float: left;
+}
+.header_Sub .h_button:hover {
+	background-color: orangered;
+}
+input.h_button {
+	
+	font-size: 13px;
+	padding-left: 10px;
+	margin-top: 1px;
+	list-style: none;
+	text-decoration: none;
+	background-color: white;
+	display: block;
+	border:0;
+}
+
+/* header_menu */
+.header_menu {
+	background: url(../images/메인/헤더/메뉴/메뉴배경.PNG);
+	background-repeat: repeat;
+	background-Position: 50% 0%;
+	margin-bottom: 10px;
+}
+
+.header_menu .wrap li {
+	float: left;
+	list-style: none;
+}
+
+.header_menu .wrap li a {
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	text-decoration: none;
+	font-size: 17px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	width: 380px;
+}
+
+.header_menu .wrap li a:hover {
+	background-color: orangered;
+}

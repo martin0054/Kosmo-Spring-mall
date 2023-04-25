@@ -1,0 +1,22 @@
+@charset "EUC-KR";
+
+.tb_style {
+	width: 800px;
+	align: center;
+}
+
+.inputbox  {
+	padding: 5px;
+    font-size: 12px;
+    border: 1px solid #D8D8D8;
+    background-color: #ffffff;
+    font-family: 'Nanum Gothic','Dotum';
+}
+
+.bordtbl tr td{
+	text-align: center;
+}
+
+.bordtbl tr td a{
+	color:black;
+}
